@@ -45,7 +45,7 @@ public class UserLogin extends JFrame {
         loginpane = new javax.swing.JLayeredPane();
         userfield = new javax.swing.JTextField();
         passfield = new javax.swing.JPasswordField();
-        LoginBt = new javax.swing.JButton();
+        loginBtn = new javax.swing.JButton();
         userlabel = new javax.swing.JLabel();
         passlabel = new javax.swing.JLabel();
         Newuserlabel = new javax.swing.JLabel();
@@ -63,10 +63,10 @@ public class UserLogin extends JFrame {
 
         passfield.setText("jPasswordField1");
 
-        LoginBt.setText("LogIn");
-        LoginBt.addActionListener(new java.awt.event.ActionListener() {
+        loginBtn.setText("LogIn");
+        loginBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginBtActionPerformed(evt);
+                loginBtnActionPerformed(evt);
             }
         });
 
@@ -87,7 +87,7 @@ public class UserLogin extends JFrame {
 
         loginpane.setLayer(userfield, javax.swing.JLayeredPane.DEFAULT_LAYER);
         loginpane.setLayer(passfield, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        loginpane.setLayer(LoginBt, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        loginpane.setLayer(loginBtn, javax.swing.JLayeredPane.DEFAULT_LAYER);
         loginpane.setLayer(userlabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         loginpane.setLayer(passlabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         loginpane.setLayer(Newuserlabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -109,7 +109,7 @@ public class UserLogin extends JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Regbutton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(LoginBt, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(112, Short.MAX_VALUE))
         );
         loginpaneLayout.setVerticalGroup(
@@ -127,7 +127,7 @@ public class UserLogin extends JFrame {
                 .addGroup(loginpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Newuserlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Regbutton)
-                    .addComponent(LoginBt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(213, Short.MAX_VALUE))
         );
 
@@ -146,8 +146,8 @@ public class UserLogin extends JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(ContentPane());
+        ContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -160,9 +160,9 @@ public class UserLogin extends JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void LoginBtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBtActionPerformed
+    private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_LoginBtActionPerformed
+    }//GEN-LAST:event_loginBtnActionPerformed
 
     private void RegbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegbuttonActionPerformed
         // TODO add your handling code here:
@@ -225,7 +225,7 @@ public class UserLogin extends JFrame {
     
 
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == LoginBt) {
+        if (e.getSource() == loginBtn) {
             connect();
         }
 
@@ -234,7 +234,7 @@ public class UserLogin extends JFrame {
 */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton LoginBt;
+    private javax.swing.JButton loginBtn;
     private javax.swing.JLabel Newuserlabel;
     private javax.swing.JButton Regbutton;
     private javax.swing.JPanel jPanel1;
